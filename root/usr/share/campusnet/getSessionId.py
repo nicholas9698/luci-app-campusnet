@@ -1,11 +1,3 @@
-'''
-Author: nicho-UJN nicholas9698@outlook.com
-Date: 2024-03-19 12:59:31
-LastEditors: nicho-UJN nicholas9698@outlook.com
-LastEditTime: 2024-03-27 20:25:42
-FilePath: /luci-app-campusnet/getSessionId.py
-Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
-'''
 #Simulate sign-in to get Cookie
 #Cookie expiration time is 30 minutes
 
@@ -47,3 +39,4 @@ if 'JSESSIONID' in cookies:
     print(cookies["JSESSIONID"])
 if 'route' in cookies:
     print(cookies["route"])
+print(routerIP)

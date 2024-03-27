@@ -32,12 +32,15 @@ start() {
 	school_id=$(uci get campusnet.@campusnet[0].school_id)
 	base_ip=$(uci get campusnet.@campusnet[0].base_ip)
 
-	routerIP=$(route -n |awk 'NR==3{print}'| awk '{ print $2; }')
-	get_date "当前路由器IP地址为：$routerIP"
+	# routerIP=$(route -n |awk 'NR==3{print}'| awk '{ print $2; }')
+	# get_date "当前路由器IP地址为：$routerIP"
     Cookies=$(python /usr/share/campusnet/getSessionId.py)
     JSESSIONID=""
     route=""
-    eval $(echo $Cookies | awk '{printf("JSESSIONID=%s;route=%s",$1,$2)}')
+	routerIP=""
+    # eval $(echo $Cookies | awk '{printf("JSESSIONID=%s;route=%s",$1,$2)}')
+	eval $(echo $Cookies | awk '{printf("JSESSIONID=%s;route=%s;routerIP=%s",$1,$2,$3)}')
+	get_date "当前路由器IP地址为：$routerIP"
 	sleep 3
 	cmd=$(curl $'http://139.198.3.98/sdjd/protalAction!portalAuth.action' \
     -H 'Accept: application/json, text/javascript, */*; q=0.01' \
