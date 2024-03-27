@@ -1,4 +1,4 @@
-# luci-app-CampusNetCU #
+# luci-app-campusnet
 
 ![GitHub License](https://img.shields.io/github/license/nicholas9698/luci-app-campusnet#pic_center)
 
@@ -11,7 +11,7 @@
 > ![Static Badge](https://img.shields.io/badge/nicholas9698-openwrt--campusnetwork--CU-blue?logo=github&link=https%3A%2F%2Fgithub.com%2Fnicholas9698%2Fopenwrt-campusnetwork-CU)
 
 
-## LEDE 或 OpenWrt 编译 ##
+## LEDE 或 OpenWrt 编译
 
 克隆本项目至 lede 或 openwrt 的 `feeds/luci/applications/`
 
